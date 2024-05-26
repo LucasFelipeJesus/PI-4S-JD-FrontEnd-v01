@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { ListChecklist } from "../../../interfaces/listChecklist"
-import { Button, Flex, HStack, Input } from "@chakra-ui/react"
+import { Button, Flex, HStack, Input, Select } from "@chakra-ui/react"
 
 interface FormListChecklistProps {
     ListChecklists: ListChecklist[]
@@ -39,6 +39,13 @@ function FormListChecklist({ ListChecklists, setListChecklists }: FormListCheckl
                     value={description}
                     onChange={(event) => setDescription(event.target.value)}
                 />
+                <Select placeholder="checklist" width={'300px'}>
+                    <option value="1">checklist 1</option>
+                    <option value="2">checklist 2</option>
+                    <option value="3">checklist 3</option>
+                    <option value="4">checklist 4</option>
+                    
+                </Select>
             </HStack>
             <Button size={"sm"} width='90px' onClick={addListChecklist} colorScheme="green">Adicionar</Button>
         </Flex>
