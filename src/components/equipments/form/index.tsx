@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Equipment } from "../../../interfaces/equipments"
-import { Button, Flex, HStack, Input } from "@chakra-ui/react"
+import { Button, Flex, HStack, Input, Select } from "@chakra-ui/react"
 
 interface FormEquipmentProps {
     equipments: Equipment[]
@@ -51,12 +51,20 @@ function FormEquipment({ equipments, setEquipments }: FormEquipmentProps) {
                     value={category}
                     onChange={(event) => setCategory(event.target.value)}
                 />
-                <Input
+                {/* <Input
+                
                     type="number"
-                    placeholder="Checklist"
+                    placeholder="Vistoria"
                     value={checklist}
                     onChange={(event) => setChecklist(event.target.value)}
-                />
+                /> */}
+                <Select>
+                    <option value="1">Vistoria 1</option>
+                    <option value="2">Vistoria 2</option>
+                    <option value="3">Vistoria 3</option>
+                    <option value="4">Vistoria 4</option>
+
+                </Select>
             </HStack>
             <Button size={"sm"} width='90px' onClick={addEquipment} colorScheme="green">Adicionar</Button>
         </Flex>

@@ -9,18 +9,18 @@ interface ItemEquipmentProps {
     description: string;
     model: string;
     category: string;
-    checklist: string; 
+    vistoria: number; 
     deleteEquipment(id: number): void
 }
 
-function ItemEquipment({ id, description, model, category, checklist, deleteEquipment }: ItemEquipmentProps) {
+function ItemEquipment({ id, description, model, category, vistoria, deleteEquipment }: ItemEquipmentProps) {
     return (
         <Tr>
             <Td>{id}</Td>
             <Td>{description}</Td>
             <Td>{model}</Td>
             <Td>{category}</Td>
-            <Td>{checklist}</Td>
+            <Td>{vistoria}</Td>
             <Td>
                 <Stack spacing={2} direction='row' justify='flex-end'>
                 <Button width={'90px'} size={'sm'} colorScheme="blue">Editar</Button>
